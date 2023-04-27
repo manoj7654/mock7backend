@@ -25,8 +25,8 @@ userRouter.get("/",(req,res)=>{
     res.send("hello from users")
 })
 
+
 userRouter.get("/allusers",async(req,res)=>{
-   
 
     try {
         let result=await UserModal.find();
@@ -36,7 +36,6 @@ userRouter.get("/allusers",async(req,res)=>{
         res.json({"message":"While finding data getting error"})
     }
 })
-
 
 userRouter.get("/alldata/:id",async(req,res)=>{
     const Id=req.params.id;
